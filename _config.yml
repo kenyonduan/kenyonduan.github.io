@@ -4,7 +4,7 @@ permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 
-name: Zach Holman
-url: http://zachholman.com
-description: A fantastic blog that is fantastic.
-twitter: holman
+name: Kenyon Duan
+url: http://kenyonduan.github.io/
+description:
+twitter: https://twitter.com/kenyonduan

@@ -1,0 +1,15 @@
+---
+layout: post
+title: Hello Github~
+category: posts
+---
+
+经过一个晚上的努力，总算将自己的 Blog 在 Github Pages 上搭建起来了 : ) ，Github 提供的这个功能还是蛮方便的， 其实之前也尝试过搭一个，不过一直没有写点什么东西上去。
+第一次尝试使用 Markdown 这种标记语言，语法看起来挺简单。Anyway，开始吧~
+
+---
+
+顺便推荐一个不错的在线Markdown编辑器-[简书]，它的预览功能很符合我的需求，这里有它的使用[教程]  : p
+
+[简书]: http://jianshu.io/writer#/
+[教程]:http://jianshu.io/p/q81RER
