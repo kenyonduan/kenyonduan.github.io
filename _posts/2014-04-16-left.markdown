@@ -4,8 +4,9 @@ title: Hello Github~
 category: posts
 ---
 
-经过一个晚上的努力，总算将自己的 Blog 在 Github Pages 上搭建起来了 : ) ，Github 提供的这个功能还是蛮方便的， 其实之前也尝试过搭一个，不过一直没有写点什么东西上去。
-第一次尝试使用 Markdown 这种标记语言，语法看起来挺简单。Anyway，开始吧~
+经过一个晚上的努力，总算将自己的 Blog 在 Github Pages 上搭建起来了 : ) ，用的是在 Github 上找到的一个[Left]主题，类似的Jekyll主题[这里]还有一些。
+话说Github 提供的这个 Github Pages 还是蛮好的，不用考虑流量、带宽、服务器这些东西，嘿嘿~ 其实之前也尝试过搭一个，不过一直没有写点什么东西上去就是。
+第一次尝试使用 Markdown 这种标记语言，语法看起来挺简单的。Anyway，开始吧 ~
 
 ---
 
@@ -13,3 +14,5 @@ category: posts
 
 [简书]: http://jianshu.io/writer#/
 [教程]:http://jianshu.io/p/q81RER
+[Left]:https://github.com/holman/left
+[这里]:http://jekyllthemes.org/
