@@ -1,9 +1,5 @@
-markdown: rdiscount
-highlighter: pygments
-pygments: true
+markdown: kramdown
 permalink: /posts/:title
-rdiscount:
-  extensions: [fenced_code_blocks, autolink, tables, strikethrough]
 
 name: Kenyon Duan
 url: http://kenyonduan.github.io/
