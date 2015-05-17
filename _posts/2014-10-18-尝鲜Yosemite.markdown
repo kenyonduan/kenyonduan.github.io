@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Macbook Air 尝鲜 Yosemite 
+title: Macbook Air 尝鲜 Yosemite
 category: posts
 ---
-
 昨天 Apple 推出了 Yosemite 的正式版，一时心痒痒就想体验一下新系统。在下载了大概5个小时左右后终于开始安装了 (顺便提一下在重启安装的界面最后一个步骤会卡上大概10分钟的样子，请克制住千万不要以为死机了然后去重启！):
 
 ![桌面](http://upload-images.jianshu.io/upload_images/42374-0223271cc3e0086e.png)
