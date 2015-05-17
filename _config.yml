@@ -1,5 +1,8 @@
-markdown: kramdown
+markdown: rdiscount
+pygments: true
 permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
 
 name: Kenyon Duan
 url: http://kenyonduan.github.io/
