@@ -2,7 +2,7 @@ markdown: rdiscount
 pygments: true
 permalink: /posts/:title
 rdiscount:
-  extensions: [smart]
+  extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 
 name: Kenyon Duan
 url: http://kenyonduan.github.io/
