@@ -11,6 +11,7 @@ Ruby 中有很多稀奇古怪的关键字，冷不丁的看到了一下还真不
 
 ### 1. \__END__(END 两边分别有两个下划线)
 如果一个文件包含这行代码，并且标记两边没有空白字符，Ruby 解释器会在此停止对该文件的处理。所以可以在该文件的余下部分可以包含任何内容(当然还是可以通过 IO 对象的 DATA 对其进行读取的)
+
 ```ruby
 # test.rb
 def foo
@@ -28,6 +29,7 @@ puts 'balabala...'
 
 ### 3. \__ENCODING__
 这个是一个常量，存储了当前文件的字符编码。
+
 ```ruby
 # gbk.rb
 # coding: GBK
@@ -37,11 +39,15 @@ puts __ENCODING__
 ```
 
 ### 4. 1_000_000_000 千分符
-1_000_000_000: 千分符(等同于1000000000)
+
+```ruby
+1_000_000_000 # 千分符(等同于1000000000)
+```
 
 
 ### 5. <<HEAR 自定义字符串分界符(需要结束)
 自定义分界符内的全部作为字符串的内容
+
 ```ruby
 # test.rb
 puts <<GROCERY_LIST
@@ -73,6 +79,7 @@ foo()
 ```
 ### 6. \`ls`
 由\`\` 包裹住的会被传递给 Kernel.\` 方法，会将文本当做一个操作系统的 shell 命令来执行(所以你也可以这样去调用 Kernel.`(......)，效果相同)，或者使用 system('ls') 也是可以的
+
 ```ruby
 # irb
 `ls` # => "rubyconf.txt\ntest.rb\n"
@@ -80,8 +87,10 @@ Kernel.`'ls' # => "rubyconf.txt\ntest.rb\n"
 system('ls') # => rubyconf.txt	test.rb
 => true
 ```
-这里捎带提一下 system、exec、`` 方法的区别，直接上代码 😊:
-######1. system
+*这里捎带提一下 system、exec、`` 方法的区别，直接上代码 😊:*
+
+####1. system
+
 ```ruby
 # test.rb
 result = system("echo 'hello'")
@@ -106,9 +115,9 @@ foobar
 false
 ```
 *总结:
-用system执行终端命令，命令会被执行，命令执行成功返回 true，命令执行失败返回 false，代码会继续往下执行。
+用system执行终端命令，命令会被执行，命令执行成功返回 true，命令执行失败返回 false，代码会继续往下执行。*
 
-######2. exec
+####2. exec
 ```ruby
 # test.rb
 exec("echo 'hello'")
@@ -119,7 +128,7 @@ puts 'foobar'
 *总结:
 后面的 puts 'foobar' 并没有被执行，以exec方法引导执行的程序启动的新进程会覆盖当前进程，而退出脚本。所以用exec可以执行终端命令，命令会被执行，命令执行成功后面的代码就不再继续执行了，命令执行失败，程序会报错。*
 
-######3. ``
+####3. ``
 ```ruby
 # test.rb
 result = `echo 'hello'`
@@ -135,6 +144,7 @@ hello
 
 ### 7. === 条件相等性操作符
 条件相等性操作符，一般用在 case 语句的目标值是否和某个 when 从句相匹配
+
 ```ruby
 case some_object
 when /a regex/
@@ -162,10 +172,13 @@ Integer === 1  # => true
 
 ### 8. =~ 正则匹配
 这个是用来匹配正则表达式的
+
 ```ruby
 "aaa0" =~ /\d/  => 3 # 返回起始位置，未匹配上返回 nil
 ```
+
 ### 9. <=> 顺序比较
+
 ```ruby
 1 <=> 2  # => -1
 1 <=> 1  # => 0
@@ -173,13 +186,16 @@ Integer === 1  # => true
 ```
 
 ### 10. \__FILE__ (Ruby 解释器正在执行的文件名称)
+
 ```ruby
 # test.rb
 puts __FILE__
 
 # ruby test.rb  => test.rb
 ```
+
 ### 11. __LINE__ (当前代码的行数(整数) 该代码属于 __FILE__ 所代表的文件)
+
 ```ruby
 # test.rb
 # 这里是一行注释
@@ -192,6 +208,7 @@ puts __LINE__
 表示在全局域内寻找 ARGV 这个常量等同于 Object::ARGV (因为不存在针对常量的 ‘全局作用域’，所以常量会被定义在 Object 里)。
 
 *PS: 另外在提一下变量和常量的一个小区别:*
+
 ```ruby
 # 1. 变量: 当 Ruby 解释器看到对变量的赋值时，变量已经存在了
 a = 1 if false
