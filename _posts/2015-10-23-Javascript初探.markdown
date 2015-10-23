@@ -5,7 +5,7 @@ title: Javascript 初探
 category: posts
 
 ---
-Javascript中几个非常重要的语言特性——对象、原型继承、闭包
+Javascript中几个非常重要的语言特性——对象、原型继承、闭包([来自 Google Docs](https://docs.google.com/document/d/1S7pSryAT3v9jyhrH4040EEVq9hennaJIg1ArnWXwZtk/edit))
 =======
 ## 1. 对象(直接声明、直接赋值、直接使用)
 > ### (1). 所有变量都是对象(除了null 和 undefined)
@@ -40,7 +40,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 > ### (5). this
   >> a. [Github Gist](https://gist.github.com/kenyonduan/87d785da835bf5345465)
   
-  >> b. setTimeout 函数
+  >> b. setTimeout 函数：
   setTimeout 会牵涉到 [Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html) 机制，简单来说就是将 js 代码分成了两种: 同步任务（synchronous）、异步任务（asynchronous）。同步任务会在在主线程上执行的任务，依次排队执行，而异步任务会进入执行队列，当任务队列通知主线程后才会进入主线程执行。异步任务中就有 Mouse click、Keypress、Network events、setTimeout 等，javascript 引擎会在 Golbal contxt 下执行这些异步任务。[代码示例](http://jsfiddle.net/dposin/okjr81ev/light/)
 
 
