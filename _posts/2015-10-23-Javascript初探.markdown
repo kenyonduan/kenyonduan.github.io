@@ -56,7 +56,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   array1.__proto__ == Array.prototype	// => true
   Object.getPrototypeOf(array1) === Array.prototype // => true
   ```
-  ![image alt text](../images/Javascript初探/image_0.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_0.png)
 
   >> #### b. 当访问对象其中的一个成员或方法的时候，如果这个对象中没有这个方法或成员，那么Javascript引擎将会访问这个对象的__proto__成员所指向的另外的一个对象，并在那个对象中查找指定的方法或成员，如果不能找到，那就会继续通过那个对象的__proto__成员指向的对象进行递归查找，直到这个链表结束(PS: 有点像 Ruby 中的方法查找)
   >> #### c. 所有的东西都由Object衍生而来, 即所有东西原型链的终点指向
