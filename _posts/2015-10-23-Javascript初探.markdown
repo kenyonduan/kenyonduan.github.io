@@ -37,8 +37,9 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 
 > ### (4). [属性的配置](https://gist.github.com/kenyonduan/4667de99d945764dfc1d)
 
-> ### (5). [this](https://gist.github.com/kenyonduan/87d785da835bf5345465)
-  #### setTimeout 函数
+> ### (5). this
+  > [Github Gist](https://gist.github.com/kenyonduan/87d785da835bf5345465)
+  > setTimeout 函数
   setTimeout 会牵涉到 [Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html) 机制，简单来说就是将 js 代码分成了两种: 同步任务（synchronous）、异步任务（asynchronous）。同步任务会在在主线程上执行的任务，依次排队执行，而异步任务会进入执行队列，当任务队列通知主线程后才会进入主线程执行。异步任务中就有 Mouse click、Keypress、Network events、setTimeout 等，javascript 引擎会在 Golbal contxt 下执行这些异步任务。[代码示例](http://jsfiddle.net/dposin/okjr81ev/light/)
 
 
@@ -46,7 +47,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 
 
 ## 2. 继承
-#####  JavaScript 不包含传统的类继承模型，而是使用 prototype 原型模型。
+  JavaScript 不包含传统的类继承模型，而是使用 prototype 原型模型。
 > ### 1. \_\_proto\_\_
   >> #### a. 示例
   ```javascript
