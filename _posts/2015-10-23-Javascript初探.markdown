@@ -52,6 +52,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 > ### (1). \_\_proto\_\_
   
   a. 示例
+  
   ```javascript
   var array1 = [1,2,3]
   array1.push(4)  //哪里来的这个方法?
