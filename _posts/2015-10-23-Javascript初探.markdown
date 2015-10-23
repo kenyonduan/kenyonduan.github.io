@@ -8,7 +8,7 @@ category: posts
 Javascript中几个非常重要的语言特性——对象、原型继承、闭包
 =======
 ## 1. 对象(直接声明、直接赋值、直接使用)
-> ### 1. 所有变量都是对象(除了null 和 undefined)
+> ### (1). 所有变量都是对象(除了null 和 undefined)
 ```javascript
 var name = 'duan';
 var duan = {name: 'duan', email: 'duan@easya.cc'};
@@ -18,7 +18,7 @@ duan['name']  //Hash(中括号操作符)
 duan.name = 'balabala'  //重新赋值
 duan = {}  //使用对象的字面语法 - {} - 可以创建一个简单对象。这个新创建的对象从Object.prototype 继承下面，没有任何自定义属性
 ```
-> ### 2. function 也是对象
+> ### (2). function 也是对象
 ```javascript
 function sayHi() {
     // 注意这里的 this, 没有它的话就是局部变量或者局部函数了
@@ -29,20 +29,20 @@ duan.satHi = sayHi  //添加成员函数
 duan.sayHi()  // => "My name is duan, my email is duan@easya.cc"
 ```
 
-> ### 3. 删除属性
+> ### (3). 删除属性
 ```javascript
 delete duan['name'] //删除对象的属性
 duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使用 delete 操作符；设置属性为 undefined 或者null 并不能真正的删除属性， 而仅仅是移除了属性和值的关联。
 ```
 
-> ### 4. [属性的配置](https://gist.github.com/kenyonduan/4667de99d945764dfc1d)
+> ### (4). [属性的配置](https://gist.github.com/kenyonduan/4667de99d945764dfc1d)
 
-> ### 5. [this](https://gist.github.com/kenyonduan/87d785da835bf5345465)
-  >> #### setTimeout 函数
-  ######setTimeout 会牵涉到 [Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html) 机制，简单来说就是将 js 代码分成了两种: 同步任务（synchronous）、异步任务（asynchronous）。同步任务会在在主线程上执行的任务，依次排队执行，而异步任务会进入执行队列，当任务队列通知主线程后才会进入主线程执行。异步任务中就有 Mouse click、Keypress、Network events、setTimeout 等，javascript 引擎会在 Golbal contxt 下执行这些异步任务。[代码示例](http://jsfiddle.net/dposin/okjr81ev/light/)
+> ### (5). [this](https://gist.github.com/kenyonduan/87d785da835bf5345465)
+  #### setTimeout 函数
+  setTimeout 会牵涉到 [Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html) 机制，简单来说就是将 js 代码分成了两种: 同步任务（synchronous）、异步任务（asynchronous）。同步任务会在在主线程上执行的任务，依次排队执行，而异步任务会进入执行队列，当任务队列通知主线程后才会进入主线程执行。异步任务中就有 Mouse click、Keypress、Network events、setTimeout 等，javascript 引擎会在 Golbal contxt 下执行这些异步任务。[代码示例](http://jsfiddle.net/dposin/okjr81ev/light/)
 
 
-> ### 6. 没有 class(ES5)
+> ### (6). 没有 class(ES5)
 
 
 ## 2. 继承
