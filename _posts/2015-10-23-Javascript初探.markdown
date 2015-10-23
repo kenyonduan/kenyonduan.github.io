@@ -67,7 +67,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   var i = new F();
   F.prototype.__proto__ == Object.prototype
   ```
-  ![image alt text](../images/Javascript初探/image_1.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_1.png)
 
 > ### 2. Prototype
   * #### prototype 成员
@@ -85,7 +85,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 	a.prototype.foobar = function() {}  //=> TypeError: Cannot set property 'foobar' of undefined
 	a.__proto__ == Base.prototype //=> true
   ```
-  ![image alt text](../images/Javascript初探/image_2.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_2.png)
   ######(1)、当一个函数对象被创建时，这个函数对象就具有一个 prototype 成员，这个成员是一个对象，这个对象包含了一个constructor 构造子成员，这个构造子成员会指向这个函数本身
   ######(2)、实例"只能"查看 __proto__ 来得知自己是基于什么 prototype 被制造出来的，所以"不能"再重新定义实例的 prototype创造出实例的实例对象
   * #### new 操作符(用来调用构造函数)
@@ -95,7 +95,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   obj.__proto__ = Base.prototype;  //将这个空对象的__proto__成员指向了Base函数对象prototype成员对象
   Base.call(obj);  //改变 this
   ```
-  ![image alt text](../images/Javascript初探/image_3.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_3.png)
   ```javascript
   //这个时候如果我们修改 Base 的 prototype 对象，为它添加一些函数:
   Base.prototype.print = function() {
@@ -135,7 +135,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   }
   var newObj = new Derive("derive");
   ```
-  ![image alt text](../images/Javascript初探/image_4.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_4.png)
   * #### 问题  
   > * ##### 为什么是 Derive.prototype = new Base() 而不是 Derive.prototype = Base.prototype ？
   ```javascript
@@ -183,7 +183,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   }
   var derive = object(base);
   ```
-  ![image alt text](../images/Javascript初探/image_5.png)
+  ![image alt text]({{ site.github.url }}/images/Javascript初探/image_5.png)
 > ### 5. Object.create 方法(ES5)
   ```javascript
   function A(){}
