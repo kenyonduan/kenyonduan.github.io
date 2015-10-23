@@ -50,8 +50,8 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 ## 2. 继承
   JavaScript 不包含传统的类继承模型，而是使用 prototype 原型模型。
 > ### (1). \_\_proto\_\_
-  a. 示例
   
+  a. 示例
   ```javascript
   var array1 = [1,2,3]
   array1.push(4)  //哪里来的这个方法?
@@ -92,8 +92,8 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 	a.__proto__ == Base.prototype //=> true
   ```
   ![image alt text]({{ site.github.url }}/images/Javascript初探/image_2.png)
-  ####1)、当一个函数对象被创建时，这个函数对象就具有一个 prototype 成员，这个成员是一个对象，这个对象包含了一个constructor 构造子成员，这个构造子成员会指向这个函数本身
-  ####2)、实例"只能"查看 __proto__ 来得知自己是基于什么 prototype 被制造出来的，所以"不能"再重新定义实例的 prototype创造出实例的实例对象
+  (1)、当一个函数对象被创建时，这个函数对象就具有一个 prototype 成员，这个成员是一个对象，这个对象包含了一个constructor 构造子成员，这个构造子成员会指向这个函数本身
+  (2)、实例"只能"查看 __proto__ 来得知自己是基于什么 prototype 被制造出来的，所以"不能"再重新定义实例的 prototype创造出实例的实例对象
   *  new 操作符(用来调用构造函数)
   
   ```javascript
