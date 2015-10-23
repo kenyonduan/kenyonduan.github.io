@@ -360,17 +360,17 @@ jQuery.public()  //=> foobar
 ```
 
 ## 4. 参考
-> ### 1. [Javascript 面向对象编程](http://coolshell.cn/articles/6441.html)  
-> ### 2. [再谈javascript面向对象编程](http://coolshell.cn/articles/6668.html)
-> ### 3. [学习 JavaScript 最难点之一 -- 理解prototype(原型)](http://www.douban.com/note/293217333/)
-> ### 4. [javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
-> ### 5. [理解Javascript的闭包](http://coolshell.cn/articles/6731.html)
-> ### 6. [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
-> ### 7. [ECMAScript5.1](http://yanhaijing.com/es5/)
-> ### 8. [ECMAScript 6](http://es6.ruanyifeng.com/)
+1. [Javascript 面向对象编程](http://coolshell.cn/articles/6441.html)  
+2. [再谈javascript面向对象编程](http://coolshell.cn/articles/6668.html)
+3. [学习 JavaScript 最难点之一 -- 理解prototype(原型)](http://www.douban.com/note/293217333/)
+4. [javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
+5. [理解Javascript的闭包](http://coolshell.cn/articles/6731.html)
+6. [学习Javascript闭包（Closure）](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+7. [ECMAScript5.1](http://yanhaijing.com/es5/)
+8. [ECMAScript 6](http://es6.ruanyifeng.com/)
 
 ## 5. 版权申明
-> * ### 如果你在哪里看到和本教程十分类似的文章，不要怀疑，就是我抄了他们的作业。
+如果你在哪里看到和本教程十分类似的文章，不要怀疑，就是我抄了他们的作业。
 
 
 Kenyon
