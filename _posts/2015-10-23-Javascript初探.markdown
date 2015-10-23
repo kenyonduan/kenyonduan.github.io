@@ -49,8 +49,8 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 
 ## 2. 继承
   JavaScript 不包含传统的类继承模型，而是使用 prototype 原型模型。
-> ### 1. \_\_proto\_\_
-  >> #### a. 示例
+> ### (1). \_\_proto\_\_
+  >>  a. 示例
   ```javascript
   var array1 = [1,2,3]
   array1.push(4)  //哪里来的这个方法?
@@ -60,8 +60,8 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   ```
   ![image alt text]({{ site.github.url }}/images/Javascript初探/image_0.png)
 
-  >> #### b. 当访问对象其中的一个成员或方法的时候，如果这个对象中没有这个方法或成员，那么Javascript引擎将会访问这个对象的__proto__成员所指向的另外的一个对象，并在那个对象中查找指定的方法或成员，如果不能找到，那就会继续通过那个对象的__proto__成员指向的对象进行递归查找，直到这个链表结束(PS: 有点像 Ruby 中的方法查找)
-  >> #### c. 所有的东西都由Object衍生而来, 即所有东西原型链的终点指向
+  >>  b. 当访问对象其中的一个成员或方法的时候，如果这个对象中没有这个方法或成员，那么Javascript引擎将会访问这个对象的__proto__成员所指向的另外的一个对象，并在那个对象中查找指定的方法或成员，如果不能找到，那就会继续通过那个对象的__proto__成员指向的对象进行递归查找，直到这个链表结束(PS: 有点像 Ruby 中的方法查找)
+  >>  c. 所有的东西都由Object衍生而来, 即所有东西原型链的终点指向
   ```javascript
   Object.prototype
   function F() {}
@@ -71,8 +71,8 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   ```
   ![image alt text]({{ site.github.url }}/images/Javascript初探/image_1.png)
 
-> ### 2. Prototype
-  * #### prototype 成员
+> ### (2). Prototype
+  *  prototype 成员
   ```javascript
   Array 的 prototype:
   Object.getOwnPropertyNames(Array.prototype)//=> ["length", "constructor", "toString", "toLocaleString", "join", "pop", "push", "concat", "reverse", "shift", "unshift", "slice", "splice", "sort", "filter", "forEach", "some", "every", "map", "indexOf", "lastIndexOf", "reduce", "reduceRight", "entries", "keys"]
@@ -88,9 +88,9 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
 	a.__proto__ == Base.prototype //=> true
   ```
   ![image alt text]({{ site.github.url }}/images/Javascript初探/image_2.png)
-  ######(1)、当一个函数对象被创建时，这个函数对象就具有一个 prototype 成员，这个成员是一个对象，这个对象包含了一个constructor 构造子成员，这个构造子成员会指向这个函数本身
-  ######(2)、实例"只能"查看 __proto__ 来得知自己是基于什么 prototype 被制造出来的，所以"不能"再重新定义实例的 prototype创造出实例的实例对象
-  * #### new 操作符(用来调用构造函数)
+  ####1)、当一个函数对象被创建时，这个函数对象就具有一个 prototype 成员，这个成员是一个对象，这个对象包含了一个constructor 构造子成员，这个构造子成员会指向这个函数本身
+  ####2)、实例"只能"查看 __proto__ 来得知自己是基于什么 prototype 被制造出来的，所以"不能"再重新定义实例的 prototype创造出实例的实例对象
+  *  new 操作符(用来调用构造函数)
   ```javascript
   var obj = new Base()  //new 操作符干了什么?
   var obj  = {};  //创建了一个空对象obj
@@ -106,12 +106,12 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   obj.print()  //=> 'foobar'
   //根据上面提到的 __proto__ 的特性，print 这个方法也可以作为 obj 对象的方法被访问到。
   ```
-  * #### 方法重写
+  * 方法重写
   ```javascript
   obj.print = function() {return 'balabala'}
   obj.print()  //=> 'balabala'    WHY?
   ```
-  * #### 总结  
+  *  总结  
   > * ##### 构造子中(一般为大写开头的函数)，我们来设置对象的成员变量（例如：上面的 id）
   > * ##### 构造子对象 prototype 中我们来设置‘类’的公共方法。通过函数对象和 __proto__与 prototype 成员以及 new 操作符，模拟出类和类实例化的效果。
   > * ##### 简单描述:
@@ -119,7 +119,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
     ###### b. prototype就是对一对象进行扩展，其特点在于通过委托的机制来调用原型对象的方法和访问原型对象的属性
 
 
-> ### 3. Pseudo classical 继承
+> ### (3). Pseudo classical 继承
   ```javascript
   function Derive(id) {
   this.id = id;
@@ -170,7 +170,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   var women = new women.constructor
   ```
 
-> ### 4. Prototypal 继承
+> ### (4). Prototypal 继承
   ```javascript
   function object(old) {
 		function F() {};
@@ -186,7 +186,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   var derive = object(base);
   ```
   ![image alt text]({{ site.github.url }}/images/Javascript初探/image_5.png)
-> ### 5. Object.create 方法(ES5)
+> ### (5). Object.create 方法(ES5)
   ```javascript
   function A(){}
   function B() {}
@@ -195,7 +195,7 @@ duan.hasOwnProperty('name')  // => false 注: 删除属性的唯一方法是使�
   A.prototype.constructor = A  //重置构造函数
   var derive = Object.create(base);  //Prototypal 继承
   ```
-> ### 6. 区别
+> ### (6). 区别
 * ##### Pseudo classical  继承是使用了“构造函数” 和 new 操作符来创建对象，并且使用了构造函数给予的 prototype 属性来构造继承链。所有的实例对象都会继承该 prototype 属性。
 * ##### Prototypal 继承是直接从现有对象来创建新的对象
 
