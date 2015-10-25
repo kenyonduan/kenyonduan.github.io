@@ -5,8 +5,10 @@ title: Javascript 初探
 category: posts
 
 ---
-Javascript中几个非常重要的语言特性——对象、原型继承、闭包([来自 Google Docs](https://docs.google.com/document/d/1S7pSryAT3v9jyhrH4040EEVq9hennaJIg1ArnWXwZtk/edit))
+Javascript中几个非常重要的语言特性——对象、原型继承、闭包
 =======
+来自 Google Docs(https://docs.google.com/document/d/1S7pSryAT3v9jyhrH4040EEVq9hennaJIg1ArnWXwZtk/edit
+
 ## 1. 对象(直接声明、直接赋值、直接使用)
 > ### (1). 所有变量都是对象(除了null 和 undefined)
 ```javascript
